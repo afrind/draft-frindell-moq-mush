@@ -338,14 +338,7 @@ Object, or skips sending an object due to buffering and/or expiry.  It has type
 ### Mic Dropped
 
 The publisher sent something so amazing nothing further needs to be sent.  The
-connection is closed immediately.  It has type 0xF03 and the following format
-
-~~~
-{
-  groupID (i)
-  objectID (i)
-}
-~~~
+connection is closed immediately.  It has type 0xF03 and no fields.
 
 ### Just Dropped
 
