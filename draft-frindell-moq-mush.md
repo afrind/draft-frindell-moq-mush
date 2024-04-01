@@ -412,7 +412,7 @@ The following status codes are defined:
 
 ## Request Capsules
 
-The following capsule is defined for the receiver.
+The following capsules are defined for the receiver.
 
 ### Unsubscribe
 
