@@ -263,7 +263,7 @@ The publisher sends Group End after it sends the last object in a group.  It has
 
 ### Pod
 
-The publisher sends a Pod capsule to add an extra layer of indirection, because frames and capsules just weren’t enough.  It has type 0xF09, and the contents are multiplexed metadata streams formatted using QUIC on Streams.
+The publisher sends a Pod capsule to add an extra layer of indirection, because frames and capsules just weren’t enough.  It has type 0xF02, and the contents are multiplexed metadata streams formatted using QUIC on Streams.
 
 ### Object Dropped
 
@@ -276,9 +276,20 @@ The publisher sends Object Dropped when it resets a Data stream carrying an Obje
 }
 ~~~
 
+### Mic Dropped
+
+The publisher sent something so amazing nothing further needs to be sent.  The connection is closed immediately.  It has type 0xF03 and the following format
+
+~~~
+{
+  groupID (i)
+  objectID (i)
+}
+~~~
+
 ### Just Dropped
 
-The publisher sends Just Dropped to inform the subscriber there’s something new and exciting they should subscribe to.  It has type 0xF0A and the following format
+The publisher sends Just Dropped to inform the subscriber there’s something new and exciting they should subscribe to.  It has type 0xF04 and the following format
  
 ~~~
 {
@@ -291,7 +302,7 @@ The publisher sends Just Dropped to inform the subscriber there’s something ne
 
 ### Reason Phrase
 
-The publisher sends a Reason Phrase capsule to give a really clear explanation of why something just happened.  Nothing good ever comes from it, but that didn’t stop us.  It has a 2048 octet minimum size. It has type 0xF0B and the following format
+The publisher sends a Reason Phrase capsule to give a really clear explanation of why something just happened.  Nothing good ever comes from it, but that didn’t stop us.  It has a 2048 octet minimum size. It has type 0xF05 and the following format
  
 ~~~
 {
@@ -301,7 +312,7 @@ The publisher sends a Reason Phrase capsule to give a really clear explanation o
 
 ### Done
 
-The publisher sends Done when it is done sending Data for this Track, followed by gracefully closing the stream.  It has type 0xF04 and the following format
+The publisher sends Done when it is done sending Data for this Track, followed by gracefully closing the stream.  It has type 0xF06 and the following format
 
 ~~~
 {
@@ -339,7 +350,7 @@ The following capsule is defined for the receiver.
 
 ### Unsubscribe
 
-The receiver sends Unsubscribe when it wants the publisher to stop sending data for this request after a certain group.  It has type 0xF05 and the following format
+The receiver sends Unsubscribe when it wants the publisher to stop sending data for this request after a certain group.  It has type 0xF07 and the following format
 
 ~~~
 {
@@ -353,7 +364,7 @@ To unsubscribe immediately, rather than after a specific group, the subscriber s
 
 ### How Do I Unsubscribe
 
-The receiver sends a How Do I Unsubscribe capsule if they didn’t read this specification, which explained not one, but two different ways to unsubscribe already.  The publisher ignores this capsule and continues publishing.  It has type 0xF06 and no fields.
+The receiver sends a How Do I Unsubscribe capsule if they didn’t read this specification, which explained not one, but two different ways to unsubscribe already.  The publisher ignores this capsule and continues publishing.  It has type 0xF08 and no fields.
 
 ## Trailers
 
