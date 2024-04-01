@@ -71,7 +71,7 @@ The following headers are valid in requests.
 
 ### Priority
 
-This header indicates the priority of this track relative to other tracks and HTTP requests.  See {{Priority}}.
+This header indicates the priority of this track relative to other tracks and HTTP requests.  See {{Priorities}}.
 
 ### Other-Priority
 
@@ -179,7 +179,7 @@ The HTTP Response on the Push stream MUST have :status = 200, and can carry the 
 
 ### Priority
 
-Sets the priority of the push stream per {{Priority}}.
+Sets the priority of the push stream per {{Priorities}}.
 
 ### Cryority
 
