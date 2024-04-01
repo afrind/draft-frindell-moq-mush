@@ -231,8 +231,7 @@ Sets the priority of the push stream per {{Priorities}}.
 ### Cryority
 
 This header is sent by the Chairs if someone brings up a priority discussion in
-the middle of discussing something else, derailing working group progress for
-2-5 weeks.
+the middle of discussing something else.
 
 ### Delivery-Mode
 
