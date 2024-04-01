@@ -394,12 +394,7 @@ Table of Contents
 
    The publisher sent something so amazing nothing further needs to be
    sent.  The connection is closed immediately.  It has type 0xF03 and
-   the following format
-
-   {
-     groupID (i)
-     objectID (i)
-   }
+   no fields.
 
 5.5.5.  Just Dropped
 
