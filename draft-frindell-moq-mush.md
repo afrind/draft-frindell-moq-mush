@@ -101,7 +101,7 @@ Subscribe is represented as an HTTP POST to the track URL.  A client can only ha
 
 ### Live-Start
 
-Live-Start is an enumeration with one of the following values: 
+Live-Start is an enumeration with one of the following values:
 
 Next Object:
 
@@ -127,7 +127,7 @@ If the Track Info, Fetch or Subscribe request is successful, the status code is 
 
 ### Object-Range
 
-Fetch responses for a range contain an Object-Range header indicating the start and end locations for the range.  This will be a subset of the requested range if the requested end is beyond the end of the track or current live head.  
+Fetch responses for a range contain an Object-Range header indicating the start and end locations for the range.  This will be a subset of the requested range if the requested end is beyond the end of the track or current live head.
 
 ### Live-Head
 
@@ -171,7 +171,7 @@ Note there’s already an Expires HTTP header with a different format and meanin
 
 Objects in the response to Fetch and Subscribe are delivered via HTTP Server Push or HTTP Datagrams according to the Delivery-Mode of the track.
 
-That’s right, we said SERVER PUSH.  You standardized it and we’re using it. 
+That’s right, we said SERVER PUSH.  You standardized it and we’re using it.
 
 ## Object Response Headers
 
@@ -187,7 +187,7 @@ This header is sent by the Chairs if someone brings up a priority discussion in 
 
 ### Delivery-Mode
 
-The delivery mode for this track.  This MUST match the Delivery-Mode specified in the Fetch or Subscribe response.  This mode determines the format of the remainder of the stream.  
+The delivery mode for this track.  This MUST match the Delivery-Mode specified in the Fetch or Subscribe response.  This mode determines the format of the remainder of the stream.
 
 When Delivery-Mode = Track, the remainder of the stream is zero or more of the following fields
 
@@ -290,7 +290,7 @@ The publisher sent something so amazing nothing further needs to be sent.  The c
 ### Just Dropped
 
 The publisher sends Just Dropped to inform the subscriber there’s something new and exciting they should subscribe to.  It has type 0xF04 and the following format
- 
+
 ~~~
 {
   connectURL (s)
@@ -303,7 +303,7 @@ The publisher sends Just Dropped to inform the subscriber there’s something ne
 ### Reason Phrase
 
 The publisher sends a Reason Phrase capsule to give a really clear explanation of why something just happened.  Nothing good ever comes from it, but that didn’t stop us.  It has a 2048 octet minimum size. It has type 0xF05 and the following format
- 
+
 ~~~
 {
   reallyGoodReasonPhrase(s)
