@@ -1,18 +1,4 @@
 ---
-###
-# Internet-Draft Markdown Template
-#
-# Any other content can be edited, but be careful not to introduce errors.
-# Some fields will be set automatically during setup if they are unchanged.
-#
-# Labels in the form draft-<yourname>-<workgroup>-<name>-latest are used by
-# the tools to refer to the current version; see "docname" for example.
-#
-# This template uses kramdown-rfc: https://github.com/cabo/kramdown-rfc
-# You can replace the entire file if you prefer a different format.
-# Change the file extension to match the format (.xml for XML, etc...)
-#
-###
 title: "Media Using Server-Push in HTTP (MUSH)"
 abbrev: "mush"
 category: info
@@ -39,9 +25,9 @@ venue:
 
 author:
  -
-    fullname: Your Name Here
+    fullname: "afrind"
     organization: Your Organization Here
-    email: your.email@example.com
+    email: "afrind@users.noreply.github.com"
 
 normative:
 
