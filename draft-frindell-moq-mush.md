@@ -34,14 +34,15 @@ normative:
   HTTP3: RFC9114
   Priorities: RFC9218
   QuicOnStreams: I-D.draft-kazuho-quic-quic-on-streams
+  MOQT: I-D.draft-ietf-moq-transport
 
 informative:
 
 
 --- abstract
 
-This draft defines how to use HTTP/3 to publish and receive Tracks as defined in
-MoQ Transport using {{HTTP3}}.  The draft does not use WebTransport, and as such
+This draft defines how to use {{HTTP3}} to publish and receive Tracks as defined
+in MoQ Transport {{MOQT}}.  The draft does not use WebTransport, and as such
 only servers can publish. Tough Cookies.
 
 --- middle
@@ -69,7 +70,7 @@ meeting with the MoQ Chairs.
 ## Encoding Track Names in URLs
 
 A Full Track Name consists of two components, a track namespace and a track
-name. These are encoded in URLs with the track_namesapce and track_name query
+name. These are encoded in URLs with the track_namespace and track_name query
 parameters.  The :path and :authority pseudo headers are set via the Connection
 URL.  The parameters are URL encoded.
 
